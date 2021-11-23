@@ -13,6 +13,7 @@
 **Packages:** pandas, numpy, sklearn, matplotlib, seaborn, datetime, yfinance, yahoofinancials, keras, tensorflow
 
 **For Yahoo Finance price history:** ```pip install yfinance``` More about Yfinance on "https://pypi.org/project/yfinance/"
+
 **For Yahoo Financials statistic:**  ```pip install yahoofinancials``` More about Yahoo Financials "https://pypi.org/project/yahoofinancials/"
 
 
@@ -46,18 +47,19 @@ Additional columns to support visualizations are:
 * daily_perc_diff - percentage price difference between open and close price
 
 ## EDA Visualizations
-Apart of few tables showing collected and sorted price data. I created list of useful visualizations to understand price and volumes change in the past.
-Plot daily close price.
-Plot daily training volume.
-Plot daily price volatility in percentage.
-Add moving average for 20, 50, 200 days and plot the with closing price.
-The subplot of similarity between coins for price close.
-Heatmap for coins correlation matrix for price close
-The subplot of similarity between coins for price volatility.
-Heatmap for coins correlation matrix for price volatility.
-Plot the full historical price for the chosen coin.
-Final model price prediction plot.
-Plot price prediction difference for last 80 days.
+I created list of useful visualizations to understand price and volumes change in the past. I focus my investigation on volatility of prices and  correlations between coins. Full list of visualizations: 
+1. Plot daily close price.
+2. Plot daily training volume.
+3. Plot daily price volatility in percentage.
+4. Add moving average for 20, 50, 200 days and plot the with closing price.
+5. The subplot of similarity between coins for price close.
+
+6. Heatmap for coins correlation matrix for price close
+7. The subplot of similarity between coins for price volatility.
+8. Heatmap for coins correlation matrix for price volatility.
+9. Plot the full historical price for the chosen coin.
+10. Final model price prediction plot.
+11. Plot price prediction difference for last 80 days.
 
 ## Model Building
 * I collected full price history for the coin to predict it price.
@@ -65,7 +67,7 @@ Plot price prediction difference for last 80 days.
 * I used 80 days prediction window to avoid overfitting. Then data has been scaled between value 0 and 1
 * I created  Keras Sequential model with a Long Short-Term Memory, with 60 and 10 units split by Dropout leyer that randomly drop 20% noddles and Dense layer with price prediction
 * Then model is fit to train data with  140 epochs with callback method on.
-* In next step I monitor loss of model to receive best possible results in the shortes time. 
+* In next step I monitor loss of model to receive best possible results in the short time. 
 * I use model to predict test data and calculate price mean squared error. I plot predicted data together with training and testing data.
 * Finally I used trained model to predict next day close price.
 
