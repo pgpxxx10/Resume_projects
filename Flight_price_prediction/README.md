@@ -61,15 +61,15 @@ As sklearn models require all data to be numeric or vector values. I work on cat
 1. Nominal data are informative that needs to be changed to dummy variables.
 2. Ordinal Data are for categories with an inherent order were retaining the order is important.
 * I used One hot encoding method for nominal variables as follow Airline, Source, Destination, Additional_Info.
-I used Label Encoding method for ordinal variables as follow for Route1, Route2, Route3, Route4, Route5:
+* I used Label Encoding method for ordinal variables as follow for Route1, Route2, Route3, Route4, Route5:
 
 ## Feature Selection:
-Preprocessing and Features Engineering delivered 42 columns. The orginal data have only 11. To avid probleem with high demontionalyty I will use Sklearn features extraction method Mutual info classifier to find dependent variables. 
+Preprocessing and Features Engineering delivered 42 columns. The orginal data have only 11.<br> To avid probleem with high demontionalyty I will use Sklearn features extraction method Mutual info classifier to find dependent variables.
 
 ## Model Building:
 
 * First, I split the data into train and tests sets with a test size of 20%.
-* As price prediction is regression problem I will try the below model from sklearn:
+* As price prediction is regression problem I will try the below model from scikit-learn:
 1. Linear Model
 2. Logistic Regression
 3. KNeighbors Regressor
@@ -86,6 +86,6 @@ Second, the best model Radiant Boosting Regressor delivered 85% for the training
 I used RandomizedSearchCV to search best hyperparameters : n_estimators, max_features, max_depth, min_samples_leaf.
 * I plot distribution between actual value and predicted value.
 * I draw a horizontal barplot for top 10 importances variables for best model.
-* Finaly best model has been saved
+* Finaly best model has been saved.
 
 
